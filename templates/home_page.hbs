@@ -58,6 +58,9 @@
         {{#each sections}}
         <li class="blocks-item">
           <a href='{{url}}' class="blocks-item-link">
+            {{#is name 'Getting Started'}}
+            <img alt="Getting Started" src="{{asset 'home-room-manager.png'}}" />
+            {{/is}}
             <h2 class="blocks-item-title">{{name}}</h2>
             <p class="blocks-item-description">{{excerpt description}}</p>
           </a>
