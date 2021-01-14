@@ -17,6 +17,10 @@
     height: 85vh;
   }
 
+  &-homepage {
+    height: $header-height * 4;
+  }
+
   &-small {
     height: $header-height * 2;
   }
