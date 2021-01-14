@@ -23,6 +23,7 @@
     <h1 class="home-categories-heading" id="browse-knowledge-base">Browse the Help Center</h1>
     <section class="categories blocks">
       <ul class="blocks-list">
+        {{#each categories}}
         {{#each sections}}
         <li class="blocks-item">
           <a href='{{url}}' class="blocks-item-link">
@@ -30,6 +31,7 @@
             <p class="blocks-item-description">{{excerpt description}}</p>
           </a>
         </li>
+        {{/each}}
         {{/each}}
       </ul>
       {{pagination}}
