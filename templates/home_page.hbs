@@ -19,6 +19,27 @@
 </section>
 
 <div class="container">
+  {{#if promoted_articles}}
+  <section class="articles">
+    {{!-- <h3>{{t 'promoted_articles'}}</h3> --}}
+    <ul class="article-list promoted-articles">
+      {{#each promoted_articles}}
+      <li class="promoted-articles-item">
+        <a href="{{url}}">
+          {{title}}
+
+          {{#if internal}}
+          <span class="icon-lock" title="{{t 'internal'}}"></span>
+          {{/if}}
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+  {{/if}}
+
+  <br>
+
   <section class="section knowledge-base">
     <h1 class="home-categories-heading" id="browse-knowledge-base">Browse the Help Center</h1>
     <section class="categories blocks">
@@ -37,24 +58,6 @@
       {{pagination}}
     </section>
 
-    {{#if promoted_articles}}
-    <section class="articles">
-      <h3>{{t 'promoted_articles'}}</h3>
-      <ul class="article-list promoted-articles">
-        {{#each promoted_articles}}
-        <li class="promoted-articles-item">
-          <a href="{{url}}">
-            {{title}}
-
-            {{#if internal}}
-            <span class="icon-lock" title="{{t 'internal'}}"></span>
-            {{/if}}
-          </a>
-        </li>
-        {{/each}}
-      </ul>
-    </section>
-    {{/if}}
   </section>
 
   {{#if help_center.community_enabled}}
