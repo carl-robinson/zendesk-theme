@@ -18,6 +18,10 @@
   }
 
   &-homepage {
+    margin-top: -$header-height;
+  }
+
+  &-homepage {
     height: $header-height * 4;
   }
 
