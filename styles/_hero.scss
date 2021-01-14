@@ -14,15 +14,8 @@
   }
 
   &-large {
-    height: 85vh;
-  }
-
-  &-homepage {
-    margin-top: -$header-height;
-  }
-
-  &-homepage {
-    height: $header-height * 4;
+    // height: 85vh;
+    height: 55vh;
   }
 
   &-small {
