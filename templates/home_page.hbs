@@ -19,7 +19,7 @@
 </section>
 
 <div class="container">
-  <h1 class="home-categories-heading" id="browse-knowledge-base">Top Questions</h1>
+  <h1 class="home-categories-heading" id="browse-knowledge-base">Top questions</h1>
   {{#if promoted_articles}}
   <section class="articles">
     {{!-- <h3>{{t 'promoted_articles'}}</h3> --}}
@@ -53,6 +53,33 @@
             <h2 class="blocks-item-title">{{name}}</h2>
             <p class="blocks-item-description">{{excerpt description}}</p>
           </a>
+        </li>
+        {{/each}}
+        {{/each}}
+      </ul>
+      {{pagination}}
+    </section>
+  </section>
+
+  <section class="section knowledge-base">
+    <h1 class="home-categories-heading" id="browse-knowledge-base">Browse common questions</h1>
+    <section class="categories blocks">
+      <ul class="blocks-list">
+        {{#each categories}}
+        {{#each sections}}
+        <li class="blocks-item">
+          <h2 class="blocks-item-title">{{name}}</h2>
+          {{#each articles}}
+        <li class="articles-item">
+          <a href="{{url}}">
+            {{title}}
+
+            {{#if internal}}
+            <span class="icon-lock" title="{{t 'internal'}}"></span>
+            {{/if}}
+          </a>
+        </li>
+        {{/each}}
         </li>
         {{/each}}
         {{/each}}
